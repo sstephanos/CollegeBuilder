@@ -19,6 +19,7 @@
 		D06B372B1D4685E200A5685B /* denverFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = D06B372A1D4685E200A5685B /* denverFlag.png */; };
 		D06B372D1D4685F300A5685B /* seattleFlag.png in Resources */ = {isa = PBXBuildFile; fileRef = D06B372C1D4685F300A5685B /* seattleFlag.png */; };
 		D06B372F1D46862500A5685B /* americanFlag.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D06B372E1D46862500A5685B /* americanFlag.jpeg */; };
+		D06B37311D468B9100A5685B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B37301D468B9100A5685B /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D06B372A1D4685E200A5685B /* denverFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = denverFlag.png; path = ../../../../Downloads/denverFlag.png; sourceTree = "<group>"; };
 		D06B372C1D4685F300A5685B /* seattleFlag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seattleFlag.png; path = ../../../../Downloads/seattleFlag.png; sourceTree = "<group>"; };
 		D06B372E1D46862500A5685B /* americanFlag.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = americanFlag.jpeg; path = ../../../../Downloads/americanFlag.jpeg; sourceTree = "<group>"; };
+		D06B37301D468B9100A5685B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				D06B37281D46854900A5685B /* chicagoFlag.png */,
 				D06B37011D46630D00A5685B /* LaunchScreen.storyboard */,
 				D06B37041D46630D00A5685B /* Info.plist */,
+				D06B37301D468B9100A5685B /* DetailViewController.swift */,
 			);
 			path = TableViewHackwich;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				D06B36FB1D46630D00A5685B /* ViewController.swift in Sources */,
 				D06B36F91D46630C00A5685B /* AppDelegate.swift in Sources */,
 				D06B37271D4682E200A5685B /* City.swift in Sources */,
+				D06B37311D468B9100A5685B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

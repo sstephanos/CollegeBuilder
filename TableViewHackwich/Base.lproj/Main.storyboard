@@ -75,6 +75,66 @@
             </objects>
             <point key="canvasLocation" x="1057" y="312"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="8B1-QI-DZK">
+            <objects>
+                <viewController id="zzx-1d-qZD" customClass="DetailViewController" customModule="TableViewHackwich" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mNl-Yz-0ZZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="H5o-Un-AQS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0hX-sN-OPh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glA-L2-xd8">
+                                <rect key="frame" x="225" y="126" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-Fz-694">
+                                <rect key="frame" x="225" y="184" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-kq-rsf">
+                                <rect key="frame" x="180" y="246" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="6dS-bo-xK8"/>
+                                    <constraint firstAttribute="height" constant="150" id="wq5-UK-4Xq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTK-yl-nuh">
+                                <rect key="frame" x="277" y="408" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="zzx-1d-qZD" eventType="touchUpInside" id="DF8-Ct-opQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54I-eu-uv9">
+                                <rect key="frame" x="225" y="70" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hfh-Fz-694" firstAttribute="centerX" secondItem="0hX-sN-OPh" secondAttribute="centerX" id="Axn-I3-cgG"/>
+                            <constraint firstItem="glA-L2-xd8" firstAttribute="centerX" secondItem="0hX-sN-OPh" secondAttribute="centerX" id="c1l-lX-CQZ"/>
+                            <constraint firstItem="54I-eu-uv9" firstAttribute="centerX" secondItem="0hX-sN-OPh" secondAttribute="centerX" id="gdU-Tc-YPz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="54I-eu-uv9" id="Kuc-2M-Bgt"/>
+                        <outlet property="imageView" destination="rYm-kq-rsf" id="Mlw-AN-ufA"/>
+                        <outlet property="populationTextField" destination="Hfh-Fz-694" id="waT-h5-tcV"/>
+                        <outlet property="stateTextField" destination="glA-L2-xd8" id="2hg-gf-bxg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9in-Ec-Nfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="312"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="nEN-Qc-OPl">
             <objects>

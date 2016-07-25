@@ -55,6 +55,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QK4-cv-lhi">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="kJY-84-DOM">
+                            <connections>
+                                <action selector="onTappedEditButton:" destination="BYZ-38-t0r" id="lbQ-3h-WV5"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="Nhf-51-DXi">
                             <connections>
                                 <action selector="onTappedPlusButton:" destination="BYZ-38-t0r" id="JVA-s8-p9a"/>
@@ -62,6 +67,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="kJY-84-DOM" id="cdp-wn-g44"/>
                         <outlet property="tableView" destination="cGs-Ci-kCS" id="Jg2-H0-c4A"/>
                     </connections>
                 </viewController>

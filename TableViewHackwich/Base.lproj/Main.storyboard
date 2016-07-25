@@ -69,6 +69,7 @@
                     <connections>
                         <outlet property="editButton" destination="kJY-84-DOM" id="cdp-wn-g44"/>
                         <outlet property="tableView" destination="cGs-Ci-kCS" id="Jg2-H0-c4A"/>
+                        <segue destination="zzx-1d-qZD" kind="show" id="hbI-Ww-PXk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,31 +89,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="glA-L2-xd8">
-                                <rect key="frame" x="225" y="126" width="150" height="30"/>
+                                <rect key="frame" x="225" y="152" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Population" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hfh-Fz-694">
-                                <rect key="frame" x="225" y="184" width="150" height="30"/>
+                                <rect key="frame" x="225" y="208" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rYm-kq-rsf">
-                                <rect key="frame" x="180" y="246" width="250" height="150"/>
+                                <rect key="frame" x="175" y="274" width="250" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="6dS-bo-xK8"/>
                                     <constraint firstAttribute="height" constant="150" id="wq5-UK-4Xq"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTK-yl-nuh">
-                                <rect key="frame" x="277" y="408" width="46" height="30"/>
+                                <rect key="frame" x="277" y="447" width="46" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onTappedSaveButton:" destination="zzx-1d-qZD" eventType="touchUpInside" id="DF8-Ct-opQ"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54I-eu-uv9">
-                                <rect key="frame" x="225" y="70" width="150" height="30"/>
+                                <rect key="frame" x="225" y="104" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>

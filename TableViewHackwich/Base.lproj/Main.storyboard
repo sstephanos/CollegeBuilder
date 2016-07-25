@@ -25,7 +25,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" textLabel="udn-UH-zzD" style="IBUITableViewCellStyleDefault" id="TwW-3S-Leg">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TwW-3S-Leg" id="I9D-xH-Ss0">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyCell" tableViewCell="TwW-3S-Leg" id="I9D-xH-Ss0">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -41,7 +41,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="g1q-lG-iSm"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ALM-hD-xbl"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Eaa-kl-jWM"/>
                                 </connections>
                             </tableView>

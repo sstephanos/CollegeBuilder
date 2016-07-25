@@ -12,11 +12,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
-    var cities = ["Chicago", "Denver", "Seattle"]
+    var cities : [City] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
+        cities.append(City(name: "Chicago", state: "Illinois", population: 2700000, image: UIImage(named: "chicagoFlag")!))
+        cities.append(City(name: "Denver", state: "Colorado", population: 650000, image: UIImage(named: "denverFlag")!))
+        cities.append(City(name: "Seattle", state: "Washington", population: 0, image: UIImage(named: "washingtonFlag")!))
         
         }
     
@@ -26,7 +29,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
-        cell.textLabel?.text = cities[indexPath.row]
+        cell.textLabel?.text = cities[indexPath.row].name
         return cell
     }
     
@@ -47,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         alert.addAction(cancelAction)
         
         let addAction = UIAlertAction(title: "Add", style: .Default) { (action) in let cityTextField = alert.textFields![0] as UITextField
-        self.cities.append(cityTextField.text!)
+        self.cities.append(City(name: cityTextField.text!))
         self.tableView.reloadData()
         
     }

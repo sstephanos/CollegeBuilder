@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         editButton.tag = 0
         cities.append(City(name: "Chicago", state: "Illinois", population: 2700000, image: UIImage(named: "chicagoFlag")!))
         cities.append(City(name: "Denver", state: "Colorado", population: 650000, image: UIImage(named: "denverFlag")!))
-        cities.append(City(name: "Seattle", state: "Washington", population: 0, image: UIImage(named: "washingtonFlag")!))
+        cities.append(City(name: "Seattle", state: "Washington", population: 0, image: UIImage(named: "seattleFlag")!))
         
         }
     

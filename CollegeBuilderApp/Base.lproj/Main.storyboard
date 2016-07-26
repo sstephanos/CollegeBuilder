@@ -38,6 +38,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="7qT-fV-95v" kind="show" id="Uh1-Kz-8uX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -145,13 +148,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cityTextField" destination="yWs-h7-DW0" id="PHR-9A-ewQ"/>
                         <outlet property="collegeTextField" destination="yWs-h7-DW0" id="kby-ZW-eCk"/>
                         <outlet property="enrollmentTextField" destination="lZx-Yv-7Vk" id="uJt-uM-fSp"/>
                         <outlet property="imageView" destination="yM9-Eq-AG0" id="v8s-rK-Vx9"/>
                         <outlet property="locationTextField" destination="18c-2g-xLO" id="FbR-U4-qhc"/>
-                        <outlet property="populationTextField" destination="lZx-Yv-7Vk" id="Yyj-jQ-edg"/>
-                        <outlet property="stateTextField" destination="18c-2g-xLO" id="3Gz-cp-bRx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2i-uu-kih" userLabel="First Responder" sceneMemberID="firstResponder"/>

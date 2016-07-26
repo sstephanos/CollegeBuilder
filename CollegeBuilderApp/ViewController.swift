@@ -21,6 +21,11 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
        colleges.append(College(name: "Harvard", location: "Massachusetts", enrollment: 21000, image: UIImage(named: "harvardPicture")!))
        colleges.append(College(name: "UofC", location: "Illinois", enrollment: 14467, image: UIImage(named: "uofCPicture")!))
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return colleges.count

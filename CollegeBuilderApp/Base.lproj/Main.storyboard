@@ -153,6 +153,13 @@
                                     <action selector="websiteGoButton:" destination="7qT-fV-95v" eventType="touchUpInside" id="jBR-a5-zLp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo9-Gs-Opq">
+                                <rect key="frame" x="433" y="343" width="48" height="30"/>
+                                <state key="normal" title="Library"/>
+                                <connections>
+                                    <action selector="onLibraryButtonTapped:" destination="7qT-fV-95v" eventType="touchUpInside" id="ZjA-K0-YK1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -163,6 +170,7 @@
                             <constraint firstItem="LTd-bA-zhh" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" constant="138" id="skc-2b-cbf"/>
                             <constraint firstItem="yWs-h7-DW0" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="tTK-gk-trm"/>
                             <constraint firstItem="lZx-Yv-7Vk" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="xx7-5g-dZv"/>
+                            <constraint firstItem="mo9-Gs-Opq" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" constant="157" id="yZk-UG-J8F"/>
                         </constraints>
                     </view>
                     <connections>

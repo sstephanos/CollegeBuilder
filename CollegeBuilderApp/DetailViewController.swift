@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController{
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     @IBOutlet weak var collegeTextField: UITextField!
    @IBOutlet weak var locationTextField: UITextField!
@@ -17,6 +17,7 @@ class DetailViewController: UIViewController{
     @IBOutlet weak var urlStringTextField: UITextField!
     var college : College!
     
+    var imagePicker = UIImagePickerController()
     override func viewDidLoad() {
         super.viewDidLoad()
         collegeTextField.text = college.name
@@ -24,6 +25,7 @@ class DetailViewController: UIViewController{
         enrollmentTextField.text = String(college.enrollment)
        urlStringTextField.text = college.urlString
         imageView.image = college.image
+        imagePicker.delegate = self
         
         
     }
@@ -33,6 +35,8 @@ class DetailViewController: UIViewController{
         college.location = locationTextField.text!
         college.enrollment = Int(enrollmentTextField.text!)!
         college.urlString = urlStringTextField.text!
+        college.image = imageView.image
+        
         
     }
     
@@ -40,6 +44,18 @@ class DetailViewController: UIViewController{
         let url = NSURL(string: urlStringTextField.text!)
         UIApplication.sharedApplication().openURL(url!)
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true) {
+            let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.imageView.image = selectedImage
+        }
 
     }
+    @IBAction func onLibraryButtonTapped(sender: UIButton) {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
+    }
+
+}
 

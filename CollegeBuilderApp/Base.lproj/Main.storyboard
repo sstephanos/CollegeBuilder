@@ -108,18 +108,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWs-h7-DW0">
+                                <rect key="frame" x="225" y="94" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18c-2g-xLO">
-                                <rect key="frame" x="225" y="152" width="150" height="30"/>
+                                <rect key="frame" x="225" y="141" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-Yv-7Vk">
-                                <rect key="frame" x="225" y="208" width="150" height="30"/>
+                                <rect key="frame" x="225" y="190" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OOj-wh-BLf">
+                                <rect key="frame" x="185" y="237" width="230" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SPo-Cw-ijo"/>
+                                    <constraint firstAttribute="width" constant="150" id="jfc-a8-dt6"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yM9-Eq-AG0">
-                                <rect key="frame" x="175" y="274" width="250" height="150"/>
+                                <rect key="frame" x="175" y="283" width="250" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="asp-j5-EcH"/>
                                     <constraint firstAttribute="height" constant="150" id="pbl-Vi-sgP"/>
@@ -132,17 +146,21 @@
                                     <action selector="onTappedSaveButton:" destination="7qT-fV-95v" eventType="touchUpInside" id="Uct-31-byZ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWs-h7-DW0">
-                                <rect key="frame" x="225" y="104" width="150" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTd-bA-zhh">
+                                <rect key="frame" x="423" y="237" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="websiteGoButton:" destination="7qT-fV-95v" eventType="touchUpInside" id="jBR-a5-zLp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="18c-2g-xLO" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="SLR-5A-wCr"/>
+                            <constraint firstItem="OOj-wh-BLf" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="VCR-af-WKn"/>
                             <constraint firstItem="yM9-Eq-AG0" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="XEI-ET-QPE"/>
                             <constraint firstItem="Q4n-iw-NdW" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="h3n-pO-eha"/>
+                            <constraint firstItem="LTd-bA-zhh" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" constant="138" id="skc-2b-cbf"/>
                             <constraint firstItem="yWs-h7-DW0" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="tTK-gk-trm"/>
                             <constraint firstItem="lZx-Yv-7Vk" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="xx7-5g-dZv"/>
                         </constraints>
@@ -152,6 +170,7 @@
                         <outlet property="enrollmentTextField" destination="lZx-Yv-7Vk" id="uJt-uM-fSp"/>
                         <outlet property="imageView" destination="yM9-Eq-AG0" id="v8s-rK-Vx9"/>
                         <outlet property="locationTextField" destination="18c-2g-xLO" id="FbR-U4-qhc"/>
+                        <outlet property="urlStringTextField" destination="OOj-wh-BLf" id="aQS-HE-J9G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2i-uu-kih" userLabel="First Responder" sceneMemberID="firstResponder"/>

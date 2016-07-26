@@ -14,6 +14,7 @@ class DetailViewController: UIViewController{
    @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var enrollmentTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var urlStringTextField: UITextField!
     var college : College!
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class DetailViewController: UIViewController{
         collegeTextField.text = college.name
         locationTextField.text = college.location
         enrollmentTextField.text = String(college.enrollment)
+       urlStringTextField.text = college.urlString
         imageView.image = college.image
         
         
@@ -30,7 +32,14 @@ class DetailViewController: UIViewController{
         college.name = collegeTextField.text!
         college.location = locationTextField.text!
         college.enrollment = Int(enrollmentTextField.text!)!
+        college.urlString = urlStringTextField.text!
         
     }
     
-}
+    @IBAction func websiteGoButton(sender: UIButton) {
+        let url = NSURL(string: urlStringTextField.text!)
+        UIApplication.sharedApplication().openURL(url!)
+    }
+
+    }
+

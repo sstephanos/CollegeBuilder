@@ -17,11 +17,11 @@ class ViewController: UIViewController,  UITableViewDataSource, UITableViewDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         editButton.tag = 0
-        colleges.append(College(name: "Stanford", location: "California", enrollment: 16963, image: UIImage(named: "stanfordPicture")!))
-       colleges.append(College(name: "Harvard", location: "Massachusetts", enrollment: 21000, image: UIImage(named: "harvardPicture")!))
-       colleges.append(College(name: "UofC", location: "Illinois", enrollment: 14467, image: UIImage(named: "uofCPicture")!))
+        colleges.append(College(name: "Stanford", location: "California", enrollment: 16963, image: UIImage(named: "stanfordPicture")!, urlString: "https://www.stanford.edu/"))
+        colleges.append(College(name: "Harvard", location: "Massachusetts", enrollment: 21000, image: UIImage(named: "harvardPicture")!, urlString: "http://www.harvard.edu/"))
+        colleges.append(College(name: "UofC", location: "Illinois", enrollment: 14467, image: UIImage(named: "uofCPicture")!, urlString: "http://www.uchicago.edu/"))
     }
-    
+
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()

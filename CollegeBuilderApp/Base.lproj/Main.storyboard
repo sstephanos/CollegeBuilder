@@ -93,5 +93,70 @@
             </objects>
             <point key="canvasLocation" x="381" y="313"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="mGj-Bc-2UH">
+            <objects>
+                <viewController id="7qT-fV-95v" customClass="DetailViewController" customModule="CollegeBuilderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PeT-Km-IL7"/>
+                        <viewControllerLayoutGuide type="bottom" id="VNS-Bx-THb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qAs-nw-E4f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="18c-2g-xLO">
+                                <rect key="frame" x="225" y="152" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enrollment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-Yv-7Vk">
+                                <rect key="frame" x="225" y="208" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yM9-Eq-AG0">
+                                <rect key="frame" x="175" y="274" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="asp-j5-EcH"/>
+                                    <constraint firstAttribute="height" constant="150" id="pbl-Vi-sgP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4n-iw-NdW">
+                                <rect key="frame" x="277" y="447" width="46" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onTappedSaveButton:" destination="7qT-fV-95v" eventType="touchUpInside" id="Uct-31-byZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWs-h7-DW0">
+                                <rect key="frame" x="225" y="104" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="18c-2g-xLO" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="SLR-5A-wCr"/>
+                            <constraint firstItem="yM9-Eq-AG0" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="XEI-ET-QPE"/>
+                            <constraint firstItem="Q4n-iw-NdW" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="h3n-pO-eha"/>
+                            <constraint firstItem="yWs-h7-DW0" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="tTK-gk-trm"/>
+                            <constraint firstItem="lZx-Yv-7Vk" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="xx7-5g-dZv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="yWs-h7-DW0" id="PHR-9A-ewQ"/>
+                        <outlet property="collegeTextField" destination="yWs-h7-DW0" id="kby-ZW-eCk"/>
+                        <outlet property="enrollmentTextField" destination="lZx-Yv-7Vk" id="uJt-uM-fSp"/>
+                        <outlet property="imageView" destination="yM9-Eq-AG0" id="v8s-rK-Vx9"/>
+                        <outlet property="locationTextField" destination="18c-2g-xLO" id="FbR-U4-qhc"/>
+                        <outlet property="populationTextField" destination="lZx-Yv-7Vk" id="Yyj-jQ-edg"/>
+                        <outlet property="stateTextField" destination="18c-2g-xLO" id="3Gz-cp-bRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2i-uu-kih" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="313"/>
+        </scene>
     </scenes>
 </document>

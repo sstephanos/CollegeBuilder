@@ -160,9 +160,17 @@
                                     <action selector="onLibraryButtonTapped:" destination="7qT-fV-95v" eventType="touchUpInside" id="ZjA-K0-YK1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl3-vZ-qDm">
+                                <rect key="frame" x="401" y="141" width="80" height="30"/>
+                                <state key="normal" title="On the Map"/>
+                                <connections>
+                                    <segue destination="PeT-pv-G8X" kind="show" id="45U-Gb-ALw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zl3-vZ-qDm" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" constant="141" id="Klw-Jn-H77"/>
                             <constraint firstItem="18c-2g-xLO" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="SLR-5A-wCr"/>
                             <constraint firstItem="OOj-wh-BLf" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="VCR-af-WKn"/>
                             <constraint firstItem="yM9-Eq-AG0" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="XEI-ET-QPE"/>
@@ -184,6 +192,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2i-uu-kih" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1713" y="313"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="ceB-X3-2Gs">
+            <objects>
+                <viewController id="PeT-pv-G8X" customClass="MapViewController" customModule="CollegeBuilderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jxe-EO-hhK"/>
+                        <viewControllerLayoutGuide type="bottom" id="AsB-8R-oGf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUT-rN-Ldu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ueq-Zs-Crk">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gbR-8P-Yrd">
+                                <rect key="frame" x="225" y="116" width="150" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="PeT-pv-G8X" id="SwN-g5-v07"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ueq-Zs-Crk" firstAttribute="leading" secondItem="CUT-rN-Ldu" secondAttribute="leadingMargin" constant="-20" id="0Nc-s1-YP3"/>
+                            <constraint firstItem="ueq-Zs-Crk" firstAttribute="top" secondItem="jxe-EO-hhK" secondAttribute="bottom" id="Scl-wp-ZyV"/>
+                            <constraint firstItem="gbR-8P-Yrd" firstAttribute="centerX" secondItem="CUT-rN-Ldu" secondAttribute="centerX" id="acm-Gc-JOL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ueq-Zs-Crk" secondAttribute="trailing" constant="-20" id="ibQ-FL-MJK"/>
+                            <constraint firstItem="AsB-8R-oGf" firstAttribute="top" secondItem="ueq-Zs-Crk" secondAttribute="bottom" id="jqU-a0-3GW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapTextField" destination="gbR-8P-Yrd" id="h8g-iQ-3LN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4x-Aj-LVt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2381" y="313"/>
         </scene>
     </scenes>
 </document>

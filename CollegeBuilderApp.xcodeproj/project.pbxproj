@@ -16,6 +16,7 @@
 		D06B375F1D46E18400A5685B /* CollegeBuilderAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B375E1D46E18400A5685B /* CollegeBuilderAppUITests.swift */; };
 		D06B376D1D470A6B00A5685B /* College.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B376C1D470A6B00A5685B /* College.swift */; };
 		D06B376F1D47142400A5685B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B376E1D47142400A5685B /* DetailViewController.swift */; };
+		D06B38931D49428500A5685B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06B38921D49428500A5685B /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D06B37601D46E18400A5685B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D06B376C1D470A6B00A5685B /* College.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = College.swift; sourceTree = "<group>"; };
 		D06B376E1D47142400A5685B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D06B38921D49428500A5685B /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				D06B374A1D46E18400A5685B /* Info.plist */,
 				D06B376C1D470A6B00A5685B /* College.swift */,
 				D06B376E1D47142400A5685B /* DetailViewController.swift */,
+				D06B38921D49428500A5685B /* MapViewController.swift */,
 			);
 			path = CollegeBuilderApp;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				D06B37411D46E18400A5685B /* ViewController.swift in Sources */,
 				D06B373F1D46E18400A5685B /* AppDelegate.swift in Sources */,
 				D06B376D1D470A6B00A5685B /* College.swift in Sources */,
+				D06B38931D49428500A5685B /* MapViewController.swift in Sources */,
 				D06B376F1D47142400A5685B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +494,7 @@
 				D06B37651D46E18400A5685B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D06B37661D46E18400A5685B /* Build configuration list for PBXNativeTarget "CollegeBuilderAppTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +503,7 @@
 				D06B37681D46E18400A5685B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D06B37691D46E18400A5685B /* Build configuration list for PBXNativeTarget "CollegeBuilderAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +512,7 @@
 				D06B376B1D46E18400A5685B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

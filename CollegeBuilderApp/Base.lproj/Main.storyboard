@@ -228,6 +228,7 @@
                     </view>
                     <connections>
                         <outlet property="mapTextField" destination="gbR-8P-Yrd" id="h8g-iQ-3LN"/>
+                        <outlet property="mapView" destination="ueq-Zs-Crk" id="Z98-R5-qgS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4x-Aj-LVt" userLabel="First Responder" sceneMemberID="firstResponder"/>

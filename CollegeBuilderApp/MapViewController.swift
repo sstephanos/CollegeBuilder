@@ -17,10 +17,7 @@ class MapViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-    mapTextField.text = college
-
-        }
-    func mapTextFieldShouldReturn(mapTextField: UITextField) -> Bool {
+        mapTextField.text = college
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(mapTextField.text!, completionHandler:
             { (placemarks, error) in
@@ -28,29 +25,56 @@ class MapViewController: UIViewController, UITextFieldDelegate {
                     print (error)
                 }
                 else {
+                    
                     let placemark = placemarks!.first as CLPlacemark!
                     let center = placemark.location!.coordinate
                     let span = MKCoordinateSpanMake(0.1, 0.1)
-                    self.displayMap(center, span: span, pinTitle: mapTextField.text!)
+                    self.displayMap(center, span: span, pinTitle: self.mapTextField.text!)
+                    
                 }
         })
-        
         mapTextField.resignFirstResponder()
-        return true
-    }
-    func displayMap(center: CLLocationCoordinate2D,
-                    span: MKCoordinateSpan,
-                    pinTitle: String){
-        let region = MKCoordinateRegionMake(center, span)
-        let pin = MKPointAnnotation()
-        pin.coordinate = center
-        pin.title = pinTitle
-        mapView.addAnnotation(pin)
-        mapView.setRegion(region, animated: true)
-    }
-    }
+        
+        }
+    
+        func displayMap(center: CLLocationCoordinate2D,
+                        span: MKCoordinateSpan,
+                        pinTitle: String){
+            let region = MKCoordinateRegionMake(center, span)
+            let pin = MKPointAnnotation()
+            pin.coordinate = center
+            pin.title = pinTitle
+            mapView.addAnnotation(pin)
+            mapView.setRegion(region, animated: true)
+        }
+    
+    
+        func mapTextFieldShouldReturn(mapTextField: UITextField) -> Bool {
+            let geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(mapTextField.text!, completionHandler:
+                { (placemarks, error) in
+                    if error != nil {
+                        print (error)
+                    }
+                    else {
+                       
+                        let placemark = placemarks!.first as CLPlacemark!
+                        let center = placemark.location!.coordinate
+                        let span = MKCoordinateSpanMake(0.1, 0.1)
+                        self.displayMap(center, span: span, pinTitle: mapTextField.text!)
+                    
+                    }
+            })
+            
+            mapTextField.resignFirstResponder()
+            return true
+        }
+       
+
+
     
 
     
 
 
+}

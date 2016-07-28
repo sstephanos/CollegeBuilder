@@ -20,7 +20,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PKj-q9-Ntl">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.37947693919999997" green="0.6363754694" blue="0.95022087700000002" alpha="0.3245511968" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MyCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyCell" textLabel="pwT-fM-1al" style="IBUITableViewCellStyleDefault" id="ST1-7d-VE9">
                                         <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -38,6 +38,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.37687966639999998" green="0.59585507969999996" blue="1" alpha="0.3245511968" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="7qT-fV-95v" kind="show" id="Uh1-Kz-8uX"/>
                                         </connections>
@@ -141,34 +142,42 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4n-iw-NdW">
                                 <rect key="frame" x="277" y="447" width="46" height="30"/>
-                                <state key="normal" title="Save"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onTappedSaveButton:" destination="7qT-fV-95v" eventType="touchUpInside" id="Uct-31-byZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTd-bA-zhh">
                                 <rect key="frame" x="423" y="237" width="30" height="30"/>
-                                <state key="normal" title="Go"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="websiteGoButton:" destination="7qT-fV-95v" eventType="touchUpInside" id="jBR-a5-zLp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo9-Gs-Opq">
                                 <rect key="frame" x="433" y="343" width="48" height="30"/>
-                                <state key="normal" title="Library"/>
+                                <state key="normal" title="Library">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="onLibraryButtonTapped:" destination="7qT-fV-95v" eventType="touchUpInside" id="ZjA-K0-YK1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zl3-vZ-qDm">
                                 <rect key="frame" x="408" y="141" width="67" height="30"/>
-                                <state key="normal" title="Map View"/>
+                                <state key="normal" title="Map View">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="PeT-pv-G8X" kind="show" id="45U-Gb-ALw"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.37947693919999997" green="0.6363754694" blue="0.95022087700000002" alpha="0.3245511968" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zl3-vZ-qDm" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" constant="141" id="Klw-Jn-H77"/>
                             <constraint firstItem="18c-2g-xLO" firstAttribute="centerX" secondItem="qAs-nw-E4f" secondAttribute="centerX" id="SLR-5A-wCr"/>

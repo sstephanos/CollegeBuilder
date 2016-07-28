@@ -58,41 +58,35 @@ class MapViewController: UIViewController, UITextFieldDelegate {
                 }
                 else {
                     if placemarks!.count > 1{
-                    let actionController = UIAlertController(title: "Select an option", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
-                    let placemark = placemarks!.first as CLPlacemark!
+                        let actionController = UIAlertController(title: "Select an option", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+                        for i in 0..<placemarks!.count{
+                            let locationSlot = UIAlertAction(title: "\(mapTextField.text!), \(placemarks![i].administrativeArea!)", style: .Default) { (action) in
+                                let placemark : CLPlacemark = placemarks![i] as CLPlacemark!
+                                let center = placemark.location!.coordinate
+                                let span = MKCoordinateSpanMake(0.1, 0.1)
+                                self.displayMap(center, span: span, pinTitle: mapTextField.text!)
+                            }
+                            actionController.addAction(locationSlot)
+                        }
+                        
+                        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+                        actionController.addAction(cancelAction)
+                        self.presentViewController(actionController, animated: true, completion: nil)
+                    }
+                    else{
+                        
+                        
+                    }
+                    let placemark : CLPlacemark = placemarks!.first as CLPlacemark!
                     let center = placemark.location!.coordinate
                     let span = MKCoordinateSpanMake(0.1, 0.1)
                     self.displayMap(center, span: span, pinTitle: mapTextField.text!)
-                    
-                    
-                
-                    
-                    let saveAction = UIAlertAction(title: "Save", style: .Default, handler: {
-                        (alert: UIAlertAction!) -> Void in
-                        print("File Saved")})
-                    
-                    let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
-                    
-                    actionController.addAction(cancelAction)
-                    actionController.addAction(saveAction)
-                    
-                    self.presentViewController(actionController, animated: true, completion: nil)
-                    
-                    }
-                
                 }
         })
-        
-        mapTextField.resignFirstResponder()
+    mapTextField.resignFirstResponder()
         return true
-        
     }
-    
-    
-    
-    
-    
-    
-    
-    
 }
+
+
+
